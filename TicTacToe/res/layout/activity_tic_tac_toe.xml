@@ -1,119 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <TableRow>
-    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/tt">
 
-<ImageButton android:id="@+id/btn1"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="1"
-    android:text="Click me"
-    android:background="@drawable/xo"
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@+id/reset"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_alignParentRight="true"
+        android:text="Exit" 
+        android:background="@drawable/b"
+        android:onClick="close"/>
     
-	/>
-	
-<ImageButton android:id="@+id/btn2"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="2"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>	
-<ImageButton android:id="@+id/btn3"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="3"
-    android:text="Click me"
-	android:background="@drawable/xo"
-	
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+		android:layout_height="35dp"
+		android:text="Turn: Player 1"
+		android:textSize="25dp"
+		android:textStyle="bold"
+		android:textColor="#DF3A01"
+		android:layout_marginLeft="85dp"
+		/>
 
-	/>
-	</TableRow>
-	<TableRow>
-<ImageButton android:id="@+id/btn4"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="4"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
-<ImageButton android:id="@+id/btn5"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="5"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
-<ImageButton android:id="@+id/btn6"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="6"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
+    <ImageButton
+        android:id="@+id/btn1"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/xo"
+        android:tag="1" />
 
-</TableRow>
-	<TableRow>
-<ImageButton android:id="@+id/btn7"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="7"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
-<ImageButton android:id="@+id/btn8"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="8"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
-<ImageButton android:id="@+id/btn9"
-	android:layout_width="50px" 
-    android:layout_height="50px"
-    android:layout_margin="10px"
-    android:clickable="true"
-    android:tag="9"
-    android:text="Click me"
-	android:background="@drawable/xo"
-    
-	/>
+    <ImageButton
+        android:id="@+id/btn2"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignTop="@+id/btn1"
+        android:layout_toLeftOf="@+id/exit"
+        android:background="@drawable/xo"
+        android:tag="2" />
 
-</TableRow>
-	<TextView android:id="@+id/title" 
-		android:text="Turn : Player 1"
-	/>
-	<TableRow>
-	<Button android:onClick="close"
-		android:text="Exit"
-	/>
-	<Button android:onClick="restart"
-		android:text="Restart"
-	/>
-	</TableRow>
-</TableLayout>
+    <ImageButton
+        android:id="@+id/btn3"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignLeft="@+id/exit"
+        android:layout_alignTop="@+id/btn2"
+        android:layout_marginLeft="27dp"
+        android:background="@drawable/xo"
+        android:tag="3" />
+
+    <ImageButton
+        android:id="@+id/btn4"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_below="@+id/btn1"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/xo"
+        android:tag="4" />
+
+    <ImageButton
+        android:id="@+id/btn5"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignTop="@+id/btn4"
+        android:layout_toLeftOf="@+id/btn3"
+        android:background="@drawable/xo"
+        android:tag="5" />
+
+    <ImageButton
+        android:id="@+id/btn6"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignLeft="@+id/btn3"
+        android:layout_alignTop="@+id/btn5"
+        android:background="@drawable/xo"
+        android:tag="6" />
+
+    <ImageButton
+        android:id="@+id/btn7"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignLeft="@+id/btn4"
+        android:layout_below="@+id/btn4"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/xo"
+        android:tag="7" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/b"
+        android:text="Reset"
+        android:onClick="restart" />
+
+    <ImageButton
+        android:id="@+id/btn8"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignTop="@+id/btn7"
+        android:layout_toLeftOf="@+id/exit"
+        android:background="@drawable/xo"
+        android:tag="8" />
+
+    <ImageButton
+        android:id="@+id/btn9"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_alignLeft="@+id/btn6"
+        android:layout_alignTop="@+id/btn8"
+        android:background="@drawable/xo"
+        android:tag="9" />
+
+</RelativeLayout>
